@@ -1,5 +1,14 @@
 
 #!/bin/tcsh
+#WBL 25 April 2012  $Revision: 1.21 $
+
+#WBL  4 Apr 2012 Add referring to real bowtie2 runs
+#cf gip_fit1.bat r1.17, gen_0_fit2.awk
+#WBL 26 Apr 2012 Rename select.awk and simplify
+
+# gawk -f t.awk /tmp/pop.000 /tmp/pop.0_*_1.fit
+# gawk -f gen_0_fit.awk /tmp/pop.000 /tmp/pop.000_sort1.fit
+# gawk -f select.awk $TMPDIR/pop.$1 $TMPDIR/pop.$1_*.fit5
 
 BEGIN{
   print_header("/dev/stderr");
@@ -17,11 +26,13 @@ function print_header(out,  v,i) {
   n = split(t[n],tt,"_");
   n = split(tt[2],t3,".");
   filenumber[file]=t3[1];
+  #filename[file] contains * from pop.$1_*.fit5
 }
 
 (file==1 ) {
   pop[FNR]=$0;
   max=FNR;
+  #pop contains individuals and max is the number of individuals in pop.$1
 }
 
 (file==2){
@@ -66,6 +77,7 @@ END {
   for(i=3;i<=file;i++) {
     if(i in better && better[i]<1200) delete better[i];
     if(i in better) {
+      #printf("\nbetter %d\n",better[i]) > "/dev/stderr";
       nok_=nok[i];
       sortx[i] = sprintf("%01d|%020d,%s",nok_,max64-count64[i],i);
       if(nok_==5) nok5++;

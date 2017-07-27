@@ -1,0 +1,55 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_6_4_23.cnf 1 Fri Jul 21 09:55:25 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  10602                                                |
+|  Number of clauses:    103185                                               |
+|  Parsing time:         0.08         s                                       |
+minisat: ../core/Solver.C:597: Clause* Solver::propagate(): Assertion `c[1] == false_lit' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_6_4_23.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_4_3_20.cnf 2 Fri Jul 21 09:55:26 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  3902                                                 |
+|  Number of clauses:    27438                                                |
+|  Parsing time:         0.01         s                                       |
+minisat: ../core/Solver.C:597: Clause* Solver::propagate(): Assertion `c[1] == false_lit' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_4_3_20.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_6_4_28.cnf 3 Fri Jul 21 09:55:26 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  12954                                                |
+|  Number of clauses:    236646                                               |
+|  Parsing time:         0.54         s                                       |
+minisat: ../core/Solver.C:597: Clause* Solver::propagate(): Assertion `c[1] == false_lit' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_6_4_28.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_59.cnf 4 Fri Jul 21 09:55:27 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  93850                                                |
+|  Number of clauses:    1077221                                              |
+|  Parsing time:         2.20         s                                       |
+minisat: ../core/Solver.C:597: Clause* Solver::propagate(): Assertion `c[1] == false_lit' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_6_4_59.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_6_4_20.cnf 5 Fri Jul 21 09:55:32 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  9162                                                 |
+|  Number of clauses:    68574                                                |
+|  Parsing time:         0.04         s                                       |
+minisat: ../core/Solver.C:597: Clause* Solver::propagate(): Assertion `c[1] == false_lit' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_6_4_20.cnf

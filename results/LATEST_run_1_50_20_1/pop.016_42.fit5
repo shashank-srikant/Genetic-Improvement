@@ -1,0 +1,98 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_5_6_2_35.cnf 1 Fri Jul 21 12:38:28 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  7950                                                 |
+|  Number of clauses:    35871                                                |
+|  Parsing time:         0.01         s                                       |
+Verified 3578 eliminated clauses.
+restarts              : 0
+conflicts             : 1884           (11488 /sec)
+decisions             : 8162           (0.00 % random) (49768 /sec)
+propagations          : 950213         (5793982 /sec)
+conflict literals     : 0              (100.00 % deleted)
+Memory used           : 21.02 MB
+CPU time              : 0.164 s
+
+SATISFIABLE
+Log_count64: 36943463 
+it's ok: exit 10 ../testcases/cca_5_6_2_35.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_5_4_14.cnf 2 Fri Jul 21 12:38:28 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  4142                                                 |
+|  Number of clauses:    29534                                                |
+|  Parsing time:         0.02         s                                       |
+restarts              : 0
+conflicts             : 3292           (18705 /sec)
+decisions             : 4552           (0.00 % random) (25864 /sec)
+propagations          : 1164689        (6617551 /sec)
+conflict literals     : 0              (100.00 % deleted)
+Memory used           : 20.22 MB
+CPU time              : 0.176 s
+
+UNSATISFIABLE
+Log_count64: 43811142 
+it's ok: exit 20 ../testcases/cca_2_5_4_14.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_4_5_3_81.cnf 3 Fri Jul 21 12:38:28 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  47890                                                |
+|  Number of clauses:    396908                                               |
+|  Parsing time:         0.20         s                                       |
+Verified 11092 eliminated clauses.
+restarts              : 0
+conflicts             : 20647          (2893 /sec)
+decisions             : 116135         (0.00 % random) (16275 /sec)
+propagations          : 23512414       (3294901 /sec)
+conflict literals     : 0              (100.00 % deleted)
+Memory used           : 70.97 MB
+CPU time              : 7.136 s
+
+SATISFIABLE
+Log_count64: 1554779963 
+it's ok: exit 10 ../testcases/cca_4_5_3_81.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_4_12_2_19.cnf 4 Fri Jul 21 12:38:36 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  151896                                               |
+|  Number of clauses:    612245                                               |
+|  Parsing time:         0.58         s                                       |
+restarts              : 0
+conflicts             : 984            (270 /sec)
+decisions             : 3102           (0.00 % random) (852 /sec)
+propagations          : 8414354        (2311636 /sec)
+conflict literals     : 0              (100.00 % deleted)
+Memory used           : 107.50 MB
+CPU time              : 3.64 s
+
+UNSATISFIABLE
+Log_count64: 204318949 
+it's ok: exit 20 ../testcases/cca_4_12_2_19.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_68.cnf 5 Fri Jul 21 12:38:41 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  114226                                               |
+|  Number of clauses:    727502                                               |
+|  Parsing time:         0.36         s                                       |
+Verified 15982 eliminated clauses.
+restarts              : 0
+conflicts             : 29863          (1084 /sec)
+decisions             : 135839         (0.00 % random) (4932 /sec)
+propagations          : 51639633       (1875077 /sec)
+conflict literals     : 0              (100.00 % deleted)
+Memory used           : 146.04 MB
+CPU time              : 27.54 s
+
+SATISFIABLE
+Log_count64: 6891446932 
+it's ok: exit 10 ../testcases/cca_3_6_4_68.cnf

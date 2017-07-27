@@ -1,0 +1,50 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_6_4_25.cnf 1 Fri Jul 21 14:13:02 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  11514                                                |
+|  Number of clauses:    148995                                               |
+|  Parsing time:         0.16         s                                       |
+CPU time limit exceeded (core dumped)
+-5592179909 minisat status 152 on ../testcases/cca_2_6_4_25.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_5_4_15.cnf 2 Fri Jul 21 14:14:14 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  4421                                                 |
+|  Number of clauses:    45218                                                |
+|  Parsing time:         0.04         s                                       |
+CPU time limit exceeded (core dumped)
+-5592179909 minisat status 152 on ../testcases/cca_2_5_4_15.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_7_4_27.cnf 3 Fri Jul 21 14:15:26 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  16091                                                |
+|  Number of clauses:    219132                                               |
+|  Parsing time:         0.27         s                                       |
+CPU time limit exceeded (core dumped)
+-5592179909 minisat status 152 on ../testcases/cca_2_7_4_27.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_5_7_2_41.cnf 4 Fri Jul 21 14:16:38 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  29279                                                |
+|  Number of clauses:    141358                                               |
+|  Parsing time:         0.06         s                                       |
+CPU time limit exceeded (core dumped)
+-5592179909 minisat status 152 on ../testcases/cca_5_7_2_41.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_7_3_11.cnf 5 Fri Jul 21 14:17:50 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  3426                                                 |
+|  Number of clauses:    14048                                                |
+|  Parsing time:         0.00         s                                       |
+CPU time limit exceeded (core dumped)
+-5592179909 minisat status 152 on ../testcases/cca_2_7_3_11.cnf

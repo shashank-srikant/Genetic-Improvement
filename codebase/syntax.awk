@@ -1,9 +1,38 @@
 
 #!/bin/tcsh
+#WBL 19 April 2008 based on stats.awk r1.2 $Revision: 1.73 $
+#WBL 16 April 2008 based on random_syntax r1.16
+
+#WBL 17 Jul 2012 Add dif and tex
+#WBL  2 Jun 2012 nolog removes Log_count64, add allfiles
+#WBL 30 Apr 2012 ugly hack to manipulate Log_count64 outside BNF (9 May 2012)
+#WBL 17 Apr 2012 work from population without randomness, cf mutate_1.bat r1.4
+#WBL 16 Mar 2012 replacen=0 means create nonmutated file
+#WBL 13 Mar 2012 Simplify for gismo_GP
+#WBL 12 Jan 2012 r1.37+ For bowtie2/gismo, add start_symbol dont use (yet) syntax_distance
+#WBL  6 Jan 2010 Add check_term2 (doing CUDA SIR gzip matches kernel)
+#WBL 17 Sep 2009 Considerable speed up to nextquote
+#WBL 21 Aug 2009 For gzip. Allow " inside terminals by using \" rather than '
+#add nextquote and closestr
+#WBL  9 Jan 2009 Allow terminals to contains spaces and linefeeds
+#                print_prog replaces terminals with 0 or 1
+#WBL  6 Jan 2009 For generating tcas C code
+#WBL  5 Dec 2008 For generating C code
+#WBL 21 Oct 2008 Now expect integers to be enclused in double quotes
+#WBL 19 Oct 2008 egrep -n for fitness.awk
+#WBL 17 Oct 2008 Enable RE', bugfix any uses "." not N,
+#                Disable min_hairpin, min_stem
+#WBL 20 Sep 2008 For jos....
+
+#usage:
+#gawk -f syntax.awk -v "individual=4" bowtie2.bnf_GP pop.test bowtie2.bnf_GP
+
+
 
 BEGIN {
   INC = nolog? "" : "{Log_count64++;}";
   DEC = nolog? "" : "{Log_count64--;}";
+  #for pre_syntax3.awk r1.31 rule_name
   special[""] = special["for1"] = special["for2"] = special["for3"] = 1;
   special["IF"] = special["WHILE"] = special["ELSE"] = 1;
   args = ARGV[1];
@@ -26,6 +55,7 @@ function print_header(out,  v,ocomment) {
   if(!nolog) {
   print "extern int64_t Log_count64;"                           > out;
   print "extern void print_log();"                              > out;
+# print "extern bool ON(const int line);";
   }
 }
 
@@ -53,6 +83,7 @@ function print_header(out,  v,ocomment) {
     f = substr($i,1,s);
     b = substr($i,s+1);
     }}
+    #printf("%s `%s' `%s'\n",$i,f,b);
     typef = type(f);
     #check types match for sanity sake
     if(b && (typef != type(b))) {
@@ -65,6 +96,7 @@ function print_header(out,  v,ocomment) {
     }
     c=CPP(f);
     output[c] = 1;
+    #printf("updating rule %s (%s) with %d %s (%s)\n",f,rule[f],s0,b,rule[b]);
     if(dif && (f in modified_rule)) {
       print "ERROR latex multiple inserts not implemented",f,modified_rule[f];
       error = 10; exit error;
@@ -104,14 +136,20 @@ function void(type, t) {
   if(type == "ELSE") return DEC;
   return "@opps@ void error";
 }
+#based on create_mutate_bat.awk r1.9
 function CPP(rule,  n,t) {
   n = split(rule,t,"_");
+  #printf("filename(%s) ",rule);
+  #printf("%d `%s' `%s' %s\n",
+  #	 n,t[2],t[n],
+  #	 substr(rule,2+length(t[1]),length(rule)-2-length(t[1])-length(t[n])));
   return substr(rule,2+length(t[1]),length(rule)-2-length(t[1])-length(t[n]));
 }
 function cpp_line(rule,  n,t,u,i) {
   n = split(rule,t,"_");
   u = t[2];
   for(i=3;i<n;i++) u = sprintf("%s_%s",u,t[i]);
+  #u = sprintf("%s_E.cpp line %d",u,substr(t[n],1,length(t[n])-1));
   u = sprintf("%s.cpp & %3d &",u,substr(t[n],1,length(t[n])-1));
   if(tex) gsub(/_/,"\\_",u);
   return u;
@@ -142,6 +180,7 @@ END{
 function eatspace(tail,  i,c) {
     for(i=1;i<=length(tail);i++){
 	c = substr(tail,i,1);
+#	print "eatspace("tail")",i,"`"c"'";
 	if(c!=" " && c!="\t") break;
     }
     return substr(tail,i);
@@ -153,6 +192,10 @@ function nextquote(str,  text,a) {
   text = str;
   for(;i=index(text,"\"");) {
     if(substr(text,i-1,1)!="\\") return i+length(str)-length(text);
+#      a = i+length(str)-length(text);
+#      printf("nextquote(%s) %d '%s' %d\n",str,i,substr(text,i-1,2),a) > "/dev/stderr";
+#      return a;
+#    }
     text = substr(text,i+1);
   }
   return 0;
@@ -161,6 +204,7 @@ function nextpunctuation(str,  s,a,v) {
     s = nextquote(str);
     a = index(str,"<");
     v = index(str,"|");
+#printf("nextpunctuation(%s) %d %d %d =%d\n",str,s,a,v,minpos(s,minpos(a,v)));
     return minpos(s,minpos(a,v));
 }
 function closestr(  str,s) { #global tail
@@ -181,6 +225,7 @@ function closechr(c,  str,s) { #global tail
     else {
 	s++;                     #take note that excluded first char in tail
 	tail = substr(str,s+1);
+#	print "ZZ",s,tail;
 	return substr(str,1,s);
     }
 }
@@ -198,22 +243,28 @@ function parseLine(comp,  Line,i,n,s,c) {
 	tail = eatspace(tail);
 
 	if(c=="\"") {
+          #check_term2(comp[n]);
           comp[n] = (tail=="" && substr(comp[n],length(comp[n])-2)=="\\n\"") ?
                        sprintf("%s\n",substr(comp[n],2,length(comp[n])-4)) :
                        substr(comp[n],2,length(comp[n])-2);
           gsub(/\\"/,"\"",comp[n]);
+          #printf("comp[%d]=`%s'",n,comp[n]);
 	}
+	#print "YY",s,"`"c"'",n,"`"comp[n]"'","`"tail"'",file;
     }
     return n;
 }
 
 function processLine( n,comp,i) {
+# print FNR,lhs,Line;
   n = parseLine(comp);
+# printf("%s ::=",lhs); for(i=1;i<=n;i++) printf(" `%s'",comp[i]); printf("\n");
   for(i=1;i<=n;i++) rule[lhs] = sprintf("%s%s",rule[lhs],comp[i]);
 }
 
 (file==1 && index($0,"#")!=1 && $2 == "::=" && 
  split(substr($1,2),t,"_") && (t[1] in special)) {
+#   assert(!isrule($1),sprintf("%s is already defined as a rule.",$1));
     lhs = $1;
     processLine();
 }
@@ -227,6 +278,7 @@ function processLine( n,comp,i) {
     } else {
     print outfile > "/dev/stderr";
     print_header(outfile);
+    #csh code to tidy up after make
     s=index(outfile,".cpp");
     obj = substr(outfile,1,s-1);
     printf("rm -f %s\n",  outfile);
@@ -274,9 +326,13 @@ function select(text,  n,t,u,v) {
   u = substr(text,2,length(text)-length(t[n])-2);
   if(u=="") return 0;
   if(allfiles==0 && (!(u in output))) return 0;
-  outfile  = sprintf("core/%s.cc",u);
+  outfile  = sprintf("core/%s_GP.C",u);
   incfile  = sprintf("%s_H.h",u);
   changes  = change[u];
   v = substr(t[n],1,length(t[n])-1);
   return (n>1) && (0+v >= 1) && (gensub(/[0-9]/,"","g",t[n])==">");
+  #return (ans)? sprintf("%s_GP.cpp",u) : 0;
+  #printf("select(%s) `%s' %d `%s' t[%d]=`%s' `%s' %d\n",
+  #	   text,u,answer,v,n,t[n],gensub(/[0-9]/,"","g",t[n]),answer2);
+  #return (answer==0)? answer : answer2;
 }

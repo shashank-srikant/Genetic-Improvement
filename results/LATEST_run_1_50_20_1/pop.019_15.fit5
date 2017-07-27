@@ -1,0 +1,55 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_6_4_25.cnf 1 Fri Jul 21 13:33:48 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  11514                                                |
+|  Number of clauses:    148995                                               |
+|  Parsing time:         0.14         s                                       |
+minisat: ../core/Solver.C:551: Clause* Solver::propagate(): Assertion `value(p) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_6_4_25.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_4_3_8.cnf 2 Fri Jul 21 13:33:48 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  758                                                  |
+|  Number of clauses:    5600                                                 |
+|  Parsing time:         0.00         s                                       |
+minisat: ../core/Solver.C:551: Clause* Solver::propagate(): Assertion `value(p) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_4_3_8.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_65.cnf 3 Fri Jul 21 13:33:48 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  109186                                               |
+|  Number of clauses:    680171                                               |
+|  Parsing time:         0.30         s                                       |
+minisat: ../core/Solver.C:551: Clause* Solver::propagate(): Assertion `value(p) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_6_4_65.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_5_7_2_38.cnf 4 Fri Jul 21 13:33:50 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  27134                                                |
+|  Number of clauses:    131059                                               |
+|  Parsing time:         0.06         s                                       |
+minisat: ../core/Solver.C:551: Clause* Solver::propagate(): Assertion `value(p) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_5_7_2_38.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_68.cnf 5 Fri Jul 21 13:33:50 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  114226                                               |
+|  Number of clauses:    727502                                               |
+|  Parsing time:         0.33         s                                       |
+minisat: ../core/Solver.C:551: Clause* Solver::propagate(): Assertion `value(p) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_6_4_68.cnf

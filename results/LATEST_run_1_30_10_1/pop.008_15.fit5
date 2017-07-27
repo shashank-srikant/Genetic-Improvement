@@ -1,0 +1,55 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_5_4_17.cnf 1 Thu Jul 20 16:22:59 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  5059                                                 |
+|  Number of clauses:    57466                                                |
+|  Parsing time:         0.04         s                                       |
+minisat: ../core/Solver.C:1025: void Solver::verifyModel(): Assertion `!failed' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_5_4_17.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_5_6_2_31.cnf 2 Thu Jul 20 16:22:59 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  7038                                                 |
+|  Number of clauses:    31787                                                |
+|  Parsing time:         0.01         s                                       |
+minisat: ../core/Solver.C:1025: void Solver::verifyModel(): Assertion `!failed' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_5_6_2_31.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_7_4_27.cnf 3 Thu Jul 20 16:22:59 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  16091                                                |
+|  Number of clauses:    219132                                               |
+|  Parsing time:         0.27         s                                       |
+minisat: ../core/Solver.C:1025: void Solver::verifyModel(): Assertion `!failed' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_7_4_27.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_5_7_2_39.cnf 4 Thu Jul 20 16:23:00 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  27849                                                |
+|  Number of clauses:    134492                                               |
+|  Parsing time:         0.06         s                                       |
+minisat: ../core/Solver.C:1025: void Solver::verifyModel(): Assertion `!failed' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_5_7_2_39.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_68.cnf 5 Thu Jul 20 16:23:00 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  114226                                               |
+|  Number of clauses:    727502                                               |
+|  Parsing time:         0.32         s                                       |
+minisat: ../core/Solver.C:1025: void Solver::verifyModel(): Assertion `!failed' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_6_4_68.cnf

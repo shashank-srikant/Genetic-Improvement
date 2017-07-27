@@ -1,5 +1,11 @@
+MTL       = ../mtl
+CORE      = ../core
+CHDRS     = $(wildcard *.h) $(wildcard $(MTL)/*.h)
 EXEC      = minisat
-DEPDIR    = mtl utils core
-MROOT = $(PWD)/../
+CFLAGS    = -I$(MTL) -I$(CORE) -Wall -ffloat-store
+LFLAGS    = -lz
 
-include $(MROOT)/mtl/template.mk
+CSRCS     = $(wildcard *.C)
+COBJS     = $(addsuffix .o, $(basename $(CSRCS))) $(CORE)/Solver_GP.o
+
+include ../mtl/template.mk

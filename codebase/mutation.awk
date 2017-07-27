@@ -1,5 +1,11 @@
 
 #!/bin/tcsh
+#WBL 24 April 2012 Based on create_lines_used.awk r1.2 $Revision: 1.26 $
+
+#WBL also use for mutation
+#usage: 
+#gawk -f mutation.awk -v "pPopSize=40" -v "seed=999" lines_used.dat
+#gawk -f mutation.awk -v "seed=555" -v "pPopSize=20" lines_used.dat /tmp/RE_5/pop.000_select
 
 function print_head(out,  v,i) {
   v = "$Revision: 1.26 $";
@@ -94,12 +100,15 @@ function mutant(I,  m,t,type,c,n,r,u,insert,old) {
   if(r!=1) do {
     r = 1+rnd(n);
     u = rule3[c,type,r];
+    #printf("%s `%s' %s %d %s\n",c,type,n,r,u)
   } while(prod[u]==prod[m]);
+  #printf("%s `%s' %s %d ",c,type,n,r)
   old = (file>1 && I)? sprintf("%s ",pop[1+((I-1)%old_size)])  : "";
   return norepeats(sprintf("%s%s%s%s",old,m,insert,u));
 }
 
 function set_weights(I, n,t,i,s,gene,new_w,delta) { 
+  #printf("set_weights(%d) ",I);
   n=split(pop[I],t);
   for(i=1;i<=n;i++) {
     s = index(t[i],">"); gene = substr(t[i],1,s); 
@@ -107,12 +116,15 @@ function set_weights(I, n,t,i,s,gene,new_w,delta) {
       print "ERROR bad rule",n,i,"`"gene"'" > "/dev/stderr"; exit 2;}
     if(!(gene in new_w)) delta += weight[gene]-1;
     new_w[gene] = 1;
+    #printf("%s-%d ",gene,weight[gene]);
   }
   total = 0;
   for(i=1;i<=nrule;i++) { 
     g = rule[i];
     sumweight[i] = total += (g in new_w)? 1 : weight[g];
+    #printf("rule[%d]=%s sumweight[%d]=%s\n",i,rule[i],i,sumweight[i]);
   }
+  #printf("total %d %d (%d)\n",total,delta,total+delta);
 }
 
 function wrnd( w,ans) { 

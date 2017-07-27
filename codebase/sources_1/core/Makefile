@@ -1,5 +1,7 @@
+MTL       = ../mtl
+CHDRS     = $(wildcard *.h) $(wildcard $(MTL)/*.h)
 EXEC      = minisat
-DEPDIR    = mtl utils
-MROOT = /home/justyna/Documents/minisatgirelease/sources
+CFLAGS    = -I$(MTL) -Wall -ffloat-store
+LFLAGS    = -lz
 
-include $(MROOT)/mtl/template.mk
+include ../mtl/template.mk

@@ -1,29 +1,22 @@
-# The scripts are based on:
-# bowtie2gp_1_2.tar.gz written by Willam B. Langdon
-# These are available from: http://www0.cs.ucl.ac.uk/staff/ucacbbl/ftp/gp-code/bowtie2gp/gp_sources
-
-# download minisat from http://minisat.se/MiniSat.html and save to sources
+# download minisat version 2-070721 and save to sources
 # directory structure should be: sources/simp sources/mtl and sources/core
-
 # comment out print statements in Solver.C in core
 # make sure each bracket is on a separate line
-# make sure each if statement or for/while loop statement is enclosed in brackets, even if it is a one-line command
 # first compile with the -E flag enabled ( I added two lines in template.mk - line 11 and 64)
 
-# start in sources/simp/
+# start in sources/
 make clean
 make 
-cp ../core/Solver_E.cc ../
-cp ../core/Solver.cc ../
-cd ../../
+cp Solver_E.C ../
+cp Solver.C ../
+cd ../
 
-# make sure 'filename' is in Solver_E.cc
-gawk -f clean_cpp.awk filename=../core/Solver.cc /home/justyna/Documents/minisatgirelease/Solver_E.cc > out
-# sort out errors
-mv out Solver_E.cc
+# make sure 'filename' is in Solver_E.C
+gawk -f clean_cpp.awk filename=../core/Solver.C /home/justyna/CREST/minisat2-070721gp/Solver_E.C > out
+mv out Solver_E.C
 
 ./create_minisat_syntax.bat 
-gawk -f pre_syntax3.awk sources/mtl/*h sources/core/*h sources/simp/*h Solver_E.C Solver.bnf > Solver.bnf_GP
+gawk -f pre_syntax3.awk sources/*h Solver_E.C Solver.bnf > Solver.bnf_GP 
 cp Solver.bnf_GP lines_used.dat 
 grep -v '^<S' lines_used.dat > out
 grep -v '^#' out > lines_used.dat 
@@ -31,14 +24,12 @@ gawk '{print $1, 1, FNR}' lines_used.dat > out
 mv out lines_used.dat 
 
 # remove last line from lines_used.dat
-# remove 'print' lines from lines_used.dat (if they have not been commented out previously, these are the lines starting with 'reportf')
+# remove 'print' lines from lines_used.dat
 
 ./mkdir_sources.bat 1
-# remove all occurrences of EFLAGS and EOBJS from template.mk in sources_1 and sources (i.e. comment out line 11 and 64 in template.mk)
-# add Solver_H.h to sources_1/core by copying 'include' lines from Solver.cc
-# modify syntax.awk to produce .cc instead of _GP.C
-
-# add Log_count to Main
+# remove all occurrences of EFLAGS and EOBJS from Makefile in sources_1 and sources
+# add Solver_H.h to sources_1/ by copying 'include' lines from Solver.C
+# modify Makefile to produce Solver_GP.o
 
 # make sure test cases are in testcases directory 
 #(there are several benchmarks available from SAT competitions or satlib.org)
@@ -46,10 +37,8 @@ mv out lines_used.dat
 
 ./RE_gp.bat 1 6 1 1
 # remove mutations from sources_1/Solver_GP.C
-# e.g. remove {Log_count64--;} if deletion mutation was applied and add appropriate missing line from Solver.bnf_GP
-cp  sources_1/core/Solver.cc .
+cp  sources_1/Solver_GP.C .
 
-# replace Solver.cc with sources_1/Solver.cc in sources/core 
-# add Solver_H.h to sources/core
+# change Solver.C with Solver_GP.C in sources
 
 ./RE_gp.bat <seed> <population> <generations> <cpu>

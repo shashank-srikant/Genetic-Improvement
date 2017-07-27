@@ -1,0 +1,53 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_6_4_25.cnf 1 Fri Jul 21 13:34:34 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  11514                                                |
+|  Number of clauses:    148995                                               |
+|  Parsing time:         0.16         s                                       |
+Segmentation fault (core dumped)
+-5592179909 minisat status 139 on ../testcases/cca_2_6_4_25.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_2_4_3_8.cnf 2 Fri Jul 21 13:34:35 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  758                                                  |
+|  Number of clauses:    5600                                                 |
+|  Parsing time:         0.00         s                                       |
+minisat: ../core/Solver.C:315: void Solver::analyze(Clause*, vec<Lit>&, int&): Assertion `confl != __null' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_2_4_3_8.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_65.cnf 3 Fri Jul 21 13:34:35 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  109186                                               |
+|  Number of clauses:    680171                                               |
+|  Parsing time:         0.36         s                                       |
+minisat: ../core/Solver.C:315: void Solver::analyze(Clause*, vec<Lit>&, int&): Assertion `confl != __null' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_6_4_65.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_5_7_2_38.cnf 4 Fri Jul 21 13:34:36 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  27134                                                |
+|  Number of clauses:    131059                                               |
+|  Parsing time:         0.07         s                                       |
+minisat: ../core/Solver.C:786: lbool Solver::search(int, int): Assertion `value(learnt_clause[0]) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_5_7_2_38.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_68.cnf 5 Fri Jul 21 13:34:37 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  114226                                               |
+|  Number of clauses:    727502                                               |
+|  Parsing time:         0.32         s                                       |
+Segmentation fault (core dumped)
+-5592179909 minisat status 139 on ../testcases/cca_3_6_4_68.cnf

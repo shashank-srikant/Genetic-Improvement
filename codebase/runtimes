@@ -1,0 +1,123 @@
+testcases_test/cca_2_10_2_6.cnf
+SATISFIABLE
+Log_count64: 866181 , CPU time: 0.008
+testcases_test/cca_2_15_2_7.cnf
+SATISFIABLE
+Log_count64: 3580613 , CPU time: 0.024
+testcases_test/cca_2_4_2_4.cnf
+UNSATISFIABLE
+Log_count64: 22209 , CPU time: 0
+testcases_test/cca_2_4_2_5.cnf
+SATISFIABLE
+Log_count64: 25079 , CPU time: 0
+testcases_test/cca_2_4_3_8.cnf
+UNSATISFIABLE
+Log_count64: 275367 , CPU time: 0.032
+testcases_test/cca_2_5_3_10.cnf
+UNSATISFIABLE
+Log_count64: 31791067 , CPU time: 0.456
+testcases_test/cca_2_5_3_9.cnf
+UNSATISFIABLE
+Log_count64: 2955871 , CPU time: 0.116
+testcases_test/cca_2_6_4_22.cnf
+SATISFIABLE
+Log_count64: 408226843 , CPU time: 1.36
+testcases_test/cca_2_6_4_24.cnf
+SATISFIABLE
+Log_count64: 25376432 , CPU time: 0.304
+testcases_test/cca_2_6_4_28.cnf
+SATISFIABLE
+Log_count64: 67684090 , CPU time: 1.252
+testcases_test/cca_2_7_3_13.cnf
+SATISFIABLE
+Log_count64: 233687666 , CPU time: 0.872
+testcases_test/cca_2_7_4_23.cnf
+SATISFIABLE
+Log_count64: 268756257 , CPU time: 1.044
+testcases_test/cca_2_9_3_11.cnf
+UNSATISFIABLE
+Log_count64: 3902775711 , CPU time: 18.956
+testcases_test/cca_2_9_3_14.cnf
+INDETERMINATE
+testcases_test/cca_2_10_2_6.cnf
+SATISFIABLE
+Log_count64: 866181 , CPU time: 0.008
+testcases_test/cca_2_15_2_7.cnf
+SATISFIABLE
+Log_count64: 3580613 , CPU time: 0.028
+testcases_test/cca_2_4_2_4.cnf
+UNSATISFIABLE
+Log_count64: 22209 , CPU time: 0
+testcases_test/cca_2_4_2_5.cnf
+SATISFIABLE
+Log_count64: 25079 , CPU time: 0
+testcases_test/cca_2_4_3_8.cnf
+UNSATISFIABLE
+Log_count64: 275367 , CPU time: 0.036
+testcases_test/cca_2_5_3_10.cnf
+UNSATISFIABLE
+Log_count64: 31791067 , CPU time: 0.468
+testcases_test/cca_2_5_3_9.cnf
+UNSATISFIABLE
+Log_count64: 2955871 , CPU time: 0.112
+testcases_test/cca_2_6_4_22.cnf
+SATISFIABLE
+Log_count64: 408226843 , CPU time: 1.472
+testcases_test/cca_2_6_4_24.cnf
+SATISFIABLE
+Log_count64: 25376432 , CPU time: 0.308
+testcases_test/cca_2_6_4_28.cnf
+SATISFIABLE
+Log_count64: 67684090 , CPU time: 1.356
+testcases_test/cca_2_7_3_13.cnf
+SATISFIABLE
+Log_count64: 233687666 , CPU time: 0.824
+testcases_test/cca_2_7_4_23.cnf
+SATISFIABLE
+Log_count64: 268756257 , CPU time: 0.996
+testcases_test/cca_2_9_3_11.cnf
+UNSATISFIABLE
+Log_count64: 3902775711 , CPU time: 19.14
+testcases_test/cca_2_9_3_14.cnf
+INDETERMINATE
+testcases_test/cca_2_10_2_6.cnf
+SATISFIABLE
+Log_count64: 866181 , CPU time: 0.008
+testcases_test/cca_2_15_2_7.cnf
+SATISFIABLE
+Log_count64: 3580613 , CPU time: 0.028
+testcases_test/cca_2_4_2_4.cnf
+UNSATISFIABLE
+Log_count64: 22209 , CPU time: 0
+testcases_test/cca_2_4_2_5.cnf
+SATISFIABLE
+Log_count64: 25079 , CPU time: 0
+testcases_test/cca_2_4_3_8.cnf
+UNSATISFIABLE
+Log_count64: 275367 , CPU time: 0.032
+testcases_test/cca_2_5_3_10.cnf
+UNSATISFIABLE
+Log_count64: 31791067 , CPU time: 0.444
+testcases_test/cca_2_5_3_9.cnf
+UNSATISFIABLE
+Log_count64: 2955871 , CPU time: 0.108
+testcases_test/cca_2_6_4_22.cnf
+SATISFIABLE
+Log_count64: 408226843 , CPU time: 1.412
+testcases_test/cca_2_6_4_24.cnf
+SATISFIABLE
+Log_count64: 25376432 , CPU time: 0.32
+testcases_test/cca_2_6_4_28.cnf
+SATISFIABLE
+Log_count64: 67684090 , CPU time: 1.24
+testcases_test/cca_2_7_3_13.cnf
+SATISFIABLE
+Log_count64: 233687666 , CPU time: 0.784
+testcases_test/cca_2_7_4_23.cnf
+SATISFIABLE
+Log_count64: 268756257 , CPU time: 1.04
+testcases_test/cca_2_9_3_11.cnf
+UNSATISFIABLE
+Log_count64: 3902775711 , CPU time: 19.852
+testcases_test/cca_2_9_3_14.cnf
+INDETERMINATE

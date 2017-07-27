@@ -1,0 +1,55 @@
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_4_2_9.cnf 1 Thu Jul 20 19:56:27 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  468                                                  |
+|  Number of clauses:    1195                                                 |
+|  Parsing time:         0.00         s                                       |
+minisat: ../core/Solver.C:786: lbool Solver::search(int, int): Assertion `value(learnt_clause[0]) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_4_2_9.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_4_2_6.cnf 2 Thu Jul 20 19:56:27 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  306                                                  |
+|  Number of clauses:    796                                                  |
+|  Parsing time:         0.00         s                                       |
+minisat: ../core/Solver.C:786: lbool Solver::search(int, int): Assertion `value(learnt_clause[0]) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_4_2_6.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_12_2_15.cnf 3 Thu Jul 20 19:56:27 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  27504                                                |
+|  Number of clauses:    82833                                                |
+|  Parsing time:         0.04         s                                       |
+minisat: ../mtl/Vec.h:72: void vec<T>::shrink(int) [with T = int]: Assertion `nelems <= sz' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_12_2_15.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_3_6_4_63.cnf 4 Thu Jul 20 19:56:27 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  104802                                               |
+|  Number of clauses:    827801                                               |
+|  Parsing time:         1.06         s                                       |
+minisat: ../mtl/Vec.h:72: void vec<T>::shrink(int) [with T = int]: Assertion `nelems <= sz' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_3_6_4_63.cnf
+gip_0.bat $Revision: 1.8 $ shashank-VirtualBox ../testcases/cca_4_5_3_77.cnf 5 Thu Jul 20 19:56:30 IST 2017
+This is MiniSat 2.0 beta
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:  45534                                                |
+|  Number of clauses:    362972                                               |
+|  Parsing time:         0.17         s                                       |
+minisat: ../core/Solver.C:786: lbool Solver::search(int, int): Assertion `value(learnt_clause[0]) == l_Undef' failed.
+Aborted (core dumped)
+-5592179909 minisat status 134 on ../testcases/cca_4_5_3_77.cnf

@@ -1,4 +1,4 @@
 
-#include <math.h>
-#include "mtl/Sort.h"
-#include "core/Solver.h"
+#include "Solver.h"
+#include "Sort.h"
+#include <cmath>

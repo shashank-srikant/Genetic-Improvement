@@ -1,4 +1,12 @@
+
 #!/bin/tcsh
+#WBL 5 Dec 2008 $Revision: 1.51 $
+
+#WBL 10 Jan 2012 r1.48 For use with many files
+#WBL 30 Dec 2009 Revert to r1.13, disable compare,cmpfile, 2nd file
+#WBL 11 Jan 2009 Make binary heirarchy of rules
+#WBL 9 Jan 2009 Take advantage of long productions
+#WBL 6 Jan 2009 for tcas, extract required C by hand, eg tcas_syntax.c
 
 BEGIN{
   v = "$Revision: 1.51 $";
@@ -6,6 +14,7 @@ BEGIN{
 }
 
 (FNR==1){
+#  variable = 0;
   end_file();
   n = split(FILENAME,t,"/");
   s = index(t[n],"_E.");
@@ -21,6 +30,11 @@ BEGIN{
   next;
 }
 
+#(index($1,"temp")==1) {variable=1;} #hack for scan_naive_kernel.cu
+#(index($0,"}")==1)    {variable=0;}
+#(NF && variable) {#hack for scan_naive_kernel.cu
+#  varline[FNR] = 1;
+#}
 (NF) {
   lastline = FNR-header;
   exists[lastline] = 1;
@@ -46,6 +60,9 @@ function rulename(line) {
   return sprintf("<%s_%d>",filename,line);
 }
 
+#function rulename2(bot,top) { 
+#  return (bot!=top)? sprintf("<%s_%d-%d>",filename,bot,top) : rulename(bot);
+#}
 function all_rules(name,bot,top, i) { #in this file
   first = 1;
   for(i=bot;i<=top;i++) {
